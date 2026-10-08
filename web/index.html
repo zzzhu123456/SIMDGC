@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>国际海运危险货物规则 · 规则检索（IMDG Code 42-24 中文版）</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <span class="logo">IMDG</span>
+    <div class="titles">
+      <h1>国际海运危险货物规则 · 规则检索</h1>
+      <div class="sub">中文版 · 第42—24修正案（MSC.556(108)）· <span id="stats"></span></div>
+    </div>
+  </div>
+  <nav class="tabs">
+    <button data-view="search" class="active">检索</button>
+    <button data-view="changes">版本差异 42-24</button>
+    <button data-view="browse">分类浏览</button>
+    <button data-view="about">说明与制作方案</button>
+  </nav>
+</header>
+
+<main>
+  <!-- ===================== 检索 ===================== -->
+  <section id="view-search" class="view active">
+    <div class="searchbar">
+      <input id="q" type="search" autocomplete="off" spellcheck="false"
+             placeholder="输入 UN 号（1203）、条款号（7.1.5）、代码（SP310 / P001 / IBC02 / T4）或关键词（锂离子电池、积载类E、隔离）">
+      <button id="go">检索</button>
+    </div>
+    <div id="hint" class="hint"></div>
+
+    <div class="layout">
+      <aside class="panel left">
+        <div class="panel-h">类型筛选</div>
+        <div id="typeFilter" class="facets"></div>
+        <div class="panel-h">快捷入口</div>
+        <div id="quick" class="quick"></div>
+        <div class="panel-h">数据规模</div>
+        <div id="scale" class="scale"></div>
+      </aside>
+
+      <div class="panel center">
+        <div id="resultMeta" class="meta">输入条件开始检索</div>
+        <div id="results" class="results"></div>
+      </div>
+
+      <aside class="panel right">
+        <div class="panel-h">详情</div>
+        <div id="detail" class="detail"><div class="empty">在左侧选中一条结果查看详情</div></div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ===================== 版本差异 ===================== -->
+  <section id="view-changes" class="view">
+    <div class="chg-head">
+      <h2>第41—22修正案 → 第42—24修正案：改动清单</h2>
+      <p class="muted">数据来源：《国际海运危险货物规则》第42—24修正案（中文版，61页改动清单）。IMDG 修正是“整本替换”，因此该清单即两版之间的全部差异。</p>
+    </div>
+    <div id="chgStats" class="cards"></div>
+    <div class="chg-tools">
+      <input id="chgFilter" type="search" placeholder="过滤：如 3.2、UN 3559、锂、第7部分 …">
+      <div id="chgParts" class="chips"></div><span id="chgCount" class="muted" style="font-size:12.5px"></span>
+    </div>
+    <div id="chgList" class="chg-list"></div>
+  </section>
+
+  <!-- ===================== 分类浏览 ===================== -->
+  <section id="view-browse" class="view">
+    <div class="browse">
+      <aside class="panel left"><div class="panel-h">部分 / 章</div><div id="tree" class="tree"></div></aside>
+      <div class="panel center"><div id="browseList" class="results"></div></div>
+      <aside class="panel right"><div class="panel-h">详情</div><div id="detail2" class="detail"><div class="empty">选择左侧章节目录</div></div></aside>
+    </div>
+  </section>
+
+  <!-- ===================== 说明 ===================== -->
+  <section id="view-about" class="view">
+    <div id="about" class="about"></div>
+  </section>
+</main>
+
+<footer class="foot">
+  <span>Demo · 数据由 PDF 自动解析生成：危险货物一览表 2854 行、规则条款 5575 段、书末索引 4181 条</span>
+  <span id="loadNote"></span>
+</footer>
+
+<script src="data/catalog.js"></script>
+<script src="data/dgl.js"></script>
+<script src="data/clauses.js"></script>
+<script src="data/idx.js"></script>
+<script src="data/changelog.js"></script>
+<script src="data/sindex.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
